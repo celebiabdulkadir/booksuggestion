@@ -74,8 +74,14 @@ public class BookSuggestionService {
         System.out.println("Generating prompt with answers: " + answers);
         return "Suggest four books based on the following preferences:\n" +
                 "Preferred Genre: " + answers.get("genre") + "\n" +
-                "Favorite Author: " + answers.get("author") + "\n" +
-                "Language: " + answers.get("language") + "\n";
+                "Favorite Authors: " + answers.get("authors") + "\n" +
+                "Preferred Language: " + answers.get("language") + "\n" +
+                "Type of Story: " + answers.get("storyType") + "\n" +
+                "Standalone or Series: " + answers.get("standaloneOrSeries") + "\n" +
+                "Favorite Book of All Time: " + answers.get("favoriteBook") + "\n" +
+                "Specific Themes or Topics: " + answers.get("themes") + "\n" +
+                "Reading Frequency: " + answers.get("readingFrequency") + "\n" +
+                "Tone Preference: " + answers.get("tonePreference") + "\n";
     }
 
     private void handleErrorResponse(ResponseEntity<String> response) {
