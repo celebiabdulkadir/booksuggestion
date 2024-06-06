@@ -72,7 +72,7 @@ public class BookSuggestionService {
 
     private String generatePrompt(Map<String, String> answers) {
         System.out.println("Generating prompt with answers: " + answers);
-        return "Suggest four books with only name and authors based on the following preferences:\n" +
+        return "Suggest four books with only their name and authors based on the following preferences in separate lines:\n" +
                 "Preferred Genre: " + answers.get("genre") + "\n" +
                 "Favorite Authors: " + answers.get("authors") + "\n" +
                 "Preferred Language: " + answers.get("language") + "\n" +
